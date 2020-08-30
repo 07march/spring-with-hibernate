@@ -1,0 +1,95 @@
+POST http://localhost:8080/book
+Content-Type: application/json
+
+{
+  "title": "Test Title",
+  "description": "Test Description",
+  "author": "Test Author",
+  "price": 44
+}
+
+###
+
+POST http://localhost:8080/book
+Content-Type: application/json
+
+{
+  "title": "Test Title 2",
+  "description": "Test Description 2",
+  "author": "Test Author 2",
+  "price": 44
+}
+
+###
+
+POST http://localhost:8080/book
+Content-Type: application/json
+
+{
+  "title": "Test Title 3",
+  "description": "Test Description 3",
+  "author": {
+    "id": 1
+  },
+  "price": 22
+}
+
+###
+
+GET http://localhost:8080/book/getAll
+
+###
+
+GET http://localhost:8080/book/getAllByPrice?price=44
+
+###
+
+GET http://localhost:8080/book/getByTitle?title=Test+Title+2
+
+###
+
+POST http://localhost:8080/author
+Content-Type: application/json
+
+{
+  "name": "Gog"
+}
+
+###
+
+GET http://localhost:8080/author/getAll
+
+###
+
+POST http://localhost:8080/student
+Content-Type: application/json
+
+{
+  "name": "Test",
+  "number": [
+    {
+      "number": "5557878"
+    },
+    {
+      "number": "5558989"
+    }
+  ]
+}
+
+###
+
+POST http://localhost:8080/telephone
+Content-Type: application/json
+
+{
+"number": "5557878"
+}
+
+###
+
+POST http://localhost:8080/telephone/update
+Content-Type: application/x-www-form-urlencoded
+
+id=2&studentId=3&number=5559999
+
+###
